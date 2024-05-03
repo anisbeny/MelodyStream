@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+---
+
+
+    <nav class="bg-purple-900 bg-opacity-60 shadow-xl fixed bottom-0 w-full items-center px-8 py-4">
+        <ul class="flex justify-between" >
+            <li><a href="/"
+                class:list={{
+                    ["active:text-violet-600"]: true,
+                   }}>
+                   <Image src="/icons/Graphics _ Solid _ heart.svg.svg" alt="favorite" width={40} height={40} format="svg" /></a></li>
+            <li><a href="/"
+                class:list={{
+                    ["active:text-violet-600"]: true,
+                   }}>
+                   <Image src="/icons/Graphics _ Solid _ house-chimney.svg.svg" alt="favorite" width={40} height={40} format="svg" /></a></li>
+            <li><a href="/"
+                class:list={{
+                    ["active:text-violet-600"]: true,
+                   }}>
+                   <Image src="/icons/Graphics _ Solid _ outdent.svg.svg" alt="favorite" width={40} height={40} format="svg" /></a></li>
+                   <li><a href="/"
+                    class:list={{
+                        ["active:text-violet-600"]: true,
+                       }}>
+                       <Image src="/icons/user.svg" alt="favorite" width={40} height={40} format="svg" /></a></li>
+        </ul>
+    </nav>

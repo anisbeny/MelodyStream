@@ -1,0 +1,24 @@
+---
+type Props = {
+    
+    title: string;
+    cover: string;
+    
+}
+
+const {title, cover} = Astro.props as Props;
+---
+<section class="flex flex-col gap-5">
+    <h2 class="text-3xl text-purple-50 font-title font-extrabold 
+    ">Ecouter récemment</h2>
+   <ul class="grid grid-row-2 grid-col-3 gap-x-2 gap-y-4">
+    <template id="album-template">
+        <li class="flex flex-col gap-2 justify-center items-center">
+          <img src="{cover}" alt=" {title} cover" class="w-24 h-24 border border-purple-300 border-opacity-57 rounded-full shadow-lg" />
+          <h3 class="text-white   font-content font-medium ">{title}</h3>
+         
+        
+        </li>
+      </template>
+   </ul>
+</section>

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import Search from '@/components/Search.astro';
+import Layout from '@/layouts/Layout.astro';
+import News from '@/components/News.astro';
+import ListenRecently from '@/components/ListenRecently.astro';
+---
+
+<Layout>
+    <header class="flex flex-col justify-center items-center gap-4 pt-4 mx-8">
+        <Image src="/emblem.png" alt="MelodyStream" width={128}  height={124} format="png" />
+        <Search />
+    </header>
+    <main class="mt-10 mx-8 flex flex-col gap-10">
+     <News />
+     <ListenRecently />
+
+    </main>
+	
+</Layout>
+

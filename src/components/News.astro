@@ -1,0 +1,24 @@
+---
+type Props = {
+    
+    title: string;
+    cover: string;
+    artist?: string;
+}
+
+const {title, cover, artist} = Astro.props as Props;
+---
+<section class="flex flex-col gap-5">
+    <h2 class="text-3xl text-purple-50 font-title font-extrabold 
+    ">Nouveaux albums</h2>
+   <ul class="flex gap-4 overflow-x-scroll">
+    <template >
+        <li class="border-solid border border-purple-100 border-opacity-69  rounded-3xl shadow-2xl">
+          <img src="{cover}" alt="{title} cover" class="overflow-hidden" />
+          <h3 class=" flex flex-col gap-2 bg-purple-50 text-stone-950  text-lg font-content font-medium overflow-hidden">{title}<span class="text-stone-900  text-base font-content font-medium italic">{artist}</span></h3>
+         
+        
+        </li>
+      </template>
+   </ul>
+</section>
