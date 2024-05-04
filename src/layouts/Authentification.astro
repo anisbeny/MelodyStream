@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets"
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,12 +11,18 @@
         <title>Astro</title>
     </head>
       <body class="bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 h-svh overflow-hidden">
-        <section class="absolute left-[calc(-50vw+50px)] bottom-8">
-            <div class="absolute left-6 top-0 size-72 bg-purple-700 rounded-full blur-[100px] transform"></div>
-            <div class="absolute left-40 top-8 size-48 bg-blue-500 rounded-full blur-[100px] transform"></div>
-            <div class="size-32 bg-fuchsia-500 rounded-full blur-[100px] transform"></div>
-        </section>
-        <slot />
+        <main class="flex flex-col items-center justify-center gap-8 min-h-screen">
+
+            <header>
+                <Image src="/Logo.png" alt="MelodyStream" width={254}  height={200} format="png" />
+            </header>
+            <section class="absolute left-[calc(-50vw+50px)] bottom-8">
+                <div class="absolute left-6 top-0 size-72 bg-purple-700 rounded-full blur-[100px] transform"></div>
+                <div class="absolute left-40 top-8 size-48 bg-blue-500 rounded-full blur-[100px] transform"></div>
+                <div class="size-32 bg-fuchsia-500 rounded-full blur-[100px] transform"></div>
+            </section>
+            <slot />
+        </main>
         
     </body>
 </html>

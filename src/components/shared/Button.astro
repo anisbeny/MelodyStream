@@ -2,14 +2,15 @@
 
 type Props = {
     label: string;
-    icon ?: string;
+    // icon ?: string;
     onClick?: () => void;
 };
 
-const {label, icon, onClick} = Astro.props as Props;
+const {label, onClick} = Astro.props as Props;
 ---
-<button class="flex gap-4 px-8 py-4 bg-gradient-to-tr from-purple-500 via-purple-300 to-purple-200 text-stone-800  rounded-3xl" onclick="{onClick}">
-    { {icon} ? `<Image src="${icon}"  width={32} height={32} format="svg" />` : ''}
+<button class="flex  justify-center items-center gap-4 px-8 py-3 bg-gradient-to-tr from-purple-500 via-purple-300 to-purple-200 text-purplee-800  rounded-3xl w-full  ring-offset-2 ring-2 ring-purple-300" onclick="{onClick}">
+    <!-- <span>{ {icon} ? `<Image src="${icon}"  width={32} height={32} format="svg" />` : ''}
+        </span> -->
     <span>{label}</span>
 </button>
 

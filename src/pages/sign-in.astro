@@ -1,0 +1,10 @@
+---
+import Authentification from '@/layouts/Authentification.astro'
+import Formstrem from '@/components/Formstrem.astro'
+
+const title = "Connexion"
+const label="Je n'ai pas de compte, m'inscrire"
+---
+<Authentification>
+    <Formstrem header={title} labelbutton="Me connecter" labelurl={label}/>
+</Authentification>
